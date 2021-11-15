@@ -14,6 +14,7 @@ export class BsNavComponent implements OnInit, OnDestroy {
   constructor(private authenticatorService: AuthenticatorService) { }
 
   ngOnInit(): void {
+    // Checking wheather the user is logged in or not 
     this.ili_sub = this.authenticatorService.IsLoggedIn.subscribe((flag) => {
       this.isLoggedIn = flag;
     });

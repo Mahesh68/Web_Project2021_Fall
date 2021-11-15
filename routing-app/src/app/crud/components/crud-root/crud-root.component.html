@@ -1,0 +1,34 @@
+<div class="container" style="padding-top: 70px;">
+    <h3 class="text-warning">{{message}}</h3>
+    <a routerLink="add" class="btn btn-sm btn-primary mt-1">Add Product</a>
+    <br>
+    <br>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Status</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products">
+                <th>{{ product.id }}</th>
+                <td><a [routerLink]="['edit', product.id]" data-toggle="tooltip" data-placement="right"
+                        title="Click to Edit!" class="tla">{{ product.name }}</a></td>
+                <td>{{ product.description }}</td>
+                <td>{{ product.status }}</td>
+                <td>
+                    <button (click)="deleteProduct(product.id)" class="btn btn-sm btn-danger">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="view-side-form">
+        <router-outlet></router-outlet>
+    </div>
+</div>

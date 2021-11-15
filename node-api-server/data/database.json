@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Event One",
+      "description": "Super Widget",
+      "status": "Not Available"
+    },
+    {
+      "id": 2,
+      "name": "Event Two",
+      "description": "Gadget",
+      "status": "Available"
+    },
+    {
+      "id": 3,
+      "name": "Event Three",
+      "description": "Super Widget",
+      "status": "Available"
+    },
+    {
+      "id": 7,
+      "name": "UMKC",
+      "description": "Career events",
+      "status": "Available"
+    },
+    {
+      "id": 8,
+      "name": "Web Programming",
+      "description": "Web Project",
+      "status": "Not Available"
+    },
+    {
+      "id": 9,
+      "name": "Event_Test",
+      "description": "Test event",
+      "status": "Available"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "User One",
+      "email": "user1@abc.com"
+    },
+    {
+      "id": 2,
+      "username": "User Two",
+      "email": "user2@abc.com"
+    }
+  ]
+}

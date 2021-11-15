@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+/* GENERAL STYLES AND CLASSES 
+--------------------------------------------------------------------- */
+body {
+  /* padding-top: 70px; */
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+body a {
+  cursor: pointer;
+}
+
+body ng-component {
+  display: block;
+}
+/* MAIN STYLES
+--------------------------------------------------------------------- */
+main {
+  padding: 20px;
+  min-height: 300px;
+  /* side form */
+}
+
+main .products-table {
+  margin-top: 10px;
+}
+
+main .products-table td {
+  vertical-align: middle;
+}
+
+main .products-table .delete-column {
+  width: 115px;
+  text-align: center;
+}
+
+main .view-side-form .side-form {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  overflow: auto;
+  background: #fff;
+  padding: 20px;
+  padding-top: 80px;
+  border-left: 1px solid #e0e0e0;
+}
+/* FOOTER STYLES
+--------------------------------------------------------------------- */
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+}
+
+

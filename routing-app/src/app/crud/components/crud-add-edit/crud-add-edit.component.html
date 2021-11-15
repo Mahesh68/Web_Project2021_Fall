@@ -1,0 +1,61 @@
+<div class="side-form">
+    <form class="mx-auto" style="width: 90%;" [formGroup]="productFormGroup" (submit)="saveProduct()">
+        <fieldset>
+            <legend>
+                <h2>{{title}}</h2>
+            </legend>
+
+            <div class="form-group">
+                <label for="staticId" class="mb-1">
+                    <h6 class="mb-0 text-sm" style="color: #d9955c;">Event #</h6>
+                </label>
+                <input type="text" readonly class="form-control" id="staticId" formControlName="id">
+                <div>
+                    <div class="text-info">Event # cannot be modified</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="name" class="mb-1">
+                    <h6 class="mb-0 text-sm" style="color: #d9955c;">Name</h6>
+                </label>
+                <input type="text" id="name" class="form-control" formControlName="name"
+                    [ngClass]="{ 'is-invalid': f.name.touched && f.name.invalid }" />
+                <div *ngIf="f.name.touched && f.name.invalid" class="invalid-feedback">
+                    <div *ngIf="f.name.errors!.required">Product Name is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="description" class="mb-1">
+                    <h6 class="mb-0 text-sm" style="color: #d9955c;">Description</h6>
+                </label>
+                <input type="text" id="description" class="form-control" formControlName="description"
+                    [ngClass]="{ 'is-invalid': f.description.touched && f.description.invalid }" />
+                <div *ngIf="f.description.touched && f.description.invalid" class="invalid-feedback">
+                    <div *ngIf="f.name.errors!.required">Product Description is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="status" class="mb-1">
+                    <h6 class="mb-0 text-sm" style="color: #d9955c;">Status</h6>
+                </label>
+                <select class="form-control" formControlName="status" id="status"
+                    [ngClass]="{ 'is-invalid': f.status.touched && f.status.invalid }">
+                    <option *ngFor="let s of pstatus" [value]="s.value">{{s.key}}</option>
+                </select>
+                <div *ngIf="f.status.touched && f.status.invalid" class="invalid-feedback">
+                    <div *ngIf="f.status.errors!.required">Please select the Status</div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-3 col-sm-offset-2">
+                    <button class="btn btn-primary btn-block">
+                        Save
+                    </button>
+                </div>
+                <div class="col-sm-3">
+                    <a class="btn btn-secondary btn-block" routerLink="/crud">Cancel</a>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>

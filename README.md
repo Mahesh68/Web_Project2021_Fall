@@ -11,13 +11,13 @@ Email: vmzwn@umsystem.edu
 
 My team:
 
-Name: Sailaja Narra
+Name: Sailaja Narra  
 Email: sntnn@umsystem.edu
 
-Name: Apurva
+Name: Apurva  
 Email: atn92@umkc.edu
 
-Name: Mahipal
+Name: Mahipal  
 Email: mgnhh@mail.umkc.edu
 
 
